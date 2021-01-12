@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MyFlaskApp</title>
+        <link rel=stylesheet href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <!-- Here the navbar -->
+        {% include 'includes/_navbar.html' %}
+
+        <!-- All the template will be in the block -->
+        <div class='container'>
+            {% include 'includes/_messages.html' %}
+            {% block body %}{% endblock %}
+        </div>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- This is for textarea / from ckeditor.com -->
+        <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+        <!-- This code for textarea run -->
+        <script type="text/javaScript">CKEDITOR.replace('editor');</script>
+    </body>
+</html>
